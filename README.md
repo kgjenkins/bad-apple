@@ -1,7 +1,7 @@
 # bad-apple
-This is a QGIS version of the iconic ["Bad Apple" video](https://www.youtube.com/watch?v=FtutLA63Cp8).  This video has been recreated using a wide variety of hardware and software and analog methods.  But, as far as I know, there has not been a version made with QGIS ... until now.
+This is a QGIS version of the iconic ["Bad Apple" video](https://www.youtube.com/watch?v=FtutLA63Cp8), which has been recreated dozens (if not hundreds) of times using a wide variety of hardware and software and analog methods.  But, as far as I know, there has not been a version made with QGIS ... until now.
 
-A full-resolution version of the video is available at <https://youtu.be/grtfdMUXxgU>
+A full-resolution version of the QGIS video is available at <https://youtu.be/grtfdMUXxgU>
 
 To run the video in QGIS on your own computer:
 1. Download the repo ([link](https://github.com/kgjenkins/bad-apple/archive/refs/heads/main.zip))
@@ -10,7 +10,7 @@ To run the video in QGIS on your own computer:
 4. Click the "play" button
 
 
-## How does this work?
+## How did you make this?
 
 The original video was captured and saved as individual frames using [ScreenToGif](https://github.com/NickeManarin/ScreenToGif).  I then converted those frames to 1-bit black/white pixels using [IrfanView](https://www.irfanview.com/).  Then I converted each frame into vector multi-polygons (one black, one white) using [gdal_polygonize.py](https://gdal.org/programs/gdal_polygonize.html)
 
@@ -31,3 +31,5 @@ I have the temporal controller set to use a frame rate of 30 frames per second, 
 After exporting all the frames, I used ScreenToGif to combine them into a .mp4 video at 34ms per frame.  (ScreenToGif doesn't allow floating point values for the frame duration, so I couldn't set it to 33.333333 -- maybe I should have done the capture at 40fps, which would be an even 25ms.)
 
 I then used ShotCut to splice together the view in QGIS with the exported full-screen version, and add the audio from the original video.  Due to imprecise frame rates during the original frame capture, I had to make some minor adjustments to keep the audio and video aligned.  It's not perfect, but pretty close.
+
+Many thanks to Touhou for the 1998 game featuring the song, to Nomico for the cover version, to Anira et al. for the original shadow-art animation, and for all the amazing QGIS developers for making a QGIS version possible!
