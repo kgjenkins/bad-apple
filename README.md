@@ -10,7 +10,7 @@ To run the video in QGIS on your own computer:
 4. Click the "play" button
 
 
-## How did you make this?
+## How did this happen?
 
 The original video was captured and saved as individual frames using [ScreenToGif](https://github.com/NickeManarin/ScreenToGif).  I then converted those frames to 1-bit black/white pixels using [IrfanView](https://www.irfanview.com/).  Then I converted each frame into vector multi-polygons (one black, one white) using [gdal_polygonize.py](https://gdal.org/programs/gdal_polygonize.html)
 
